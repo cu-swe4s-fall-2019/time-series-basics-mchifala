@@ -44,7 +44,7 @@ def round_time_array(import_data, resolution):
                                                      import_data._rounded_time,
                                                      import_data._value)
         if value_list != -1:
-            if import_data_object._file_type in ["activity", "bolus", "meal"]:
+            if import_data._file_type in ["activity", "bolus", "meal"]:
                 time_values[time.strftime("%m/%d/%Y %H:%M")] = sum(value_list)
             else:
                 time_values[time.strftime("%m/%d/%Y %H:%M")] = mean(value_list)
@@ -217,5 +217,7 @@ if __name__ == '__main__':
         data_5.append(round_time_array(data_file, 5))
         data_15.append(round_time_array(data_file, 15))
 
-    print_array(data_15, files_lst, args.output_file+'_5', args.sort_key)
-    print_array(data_5, files_lst, args.output_file+'_15', args.sort_key)
+    print_array(data_15, annotation_list,
+                args.output_file+'_5', args.sort_key)
+    print_array(data_5, annotation_list,
+                args.output_file+'_15', args.sort_key)
