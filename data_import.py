@@ -217,5 +217,7 @@ if __name__ == '__main__':
         data_5.append(round_time_array(data_file, 5))
         data_15.append(round_time_array(data_file, 15))
 
-    print_array(data_15, files_lst, args.output_file+'_5', args.sort_key)
-    print_array(data_5, files_lst, args.output_file+'_15', args.sort_key)
+    print_array(data_15, annotation_list,
+                args.output_file+'_5', args.sort_key)
+    print_array(data_5, annotation_list,
+                args.output_file+'_15', args.sort_key)
