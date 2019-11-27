@@ -5,7 +5,7 @@ import os
 import argparse
 
 
-def join_df(left_df, right_df, join_column):
+def join_df(left_df, right_df):
     """
     This function performs a left join on a user-specified
     column and fills all result NaN values with 0's
@@ -13,7 +13,6 @@ def join_df(left_df, right_df, join_column):
     Parameters:
     - left_df(DataFrame): The left dataframe to join
     - right_df(DataFrame): The right dataframe to join
-    - join_column(str): The column to join on
 
     Returns:
     - left_df(DataFrame): The joined dataframes
@@ -153,8 +152,7 @@ def main(base_file, directory):
     for file in os.listdir(directory):
         if ".csv" in file and base_file not in file:
             right_df = import_df(directory+"/"+file)
-            df = join_df(df, right_df, "time")
-            print(df)
+            df = join_df(df, right_df)
 
     df_5 = round_df(df, "5min", ["activity", "basal", "bolus",
                                  "cgm", "hr", "meal", "smbg"])

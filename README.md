@@ -1,5 +1,5 @@
 # Time Series Basics
-V1.0: The goal of this assignment is to combine and analyze some simple time series data. 
+V2.0: The goal of this assignment is to redo the time series assignment using the pandas module. 
 
 ## Getting Started
 
@@ -113,6 +113,22 @@ test_time_series.py runs several unit tests on the linear_search_value, print_ar
 python test_time_series.py
 ```
 
+pandas_import.py joins files from a directory to a base file, rounds and groups by time stamp, and sums or averages the data columns. The results are printed to .csv files
+
+```
+python pandas_import.py <base_file> <directory>
+```
+
+test_time_series_pandas.py runs several unit tests on the methods in pandas_import.py to test both accuracy and proper error handling.
+
+```
+python test_time_series_pandas.py
+```
+
+### Benchmarking
+
+pandas_import.py takes 5.3 seconds and required 135098 kb of memory. data_import.py takes 2 minutes and 17 seconds and required 839872 kb of memory. 
+
 ## Authors
 
 **Michael W. Chifala** - University of Colorado, Boulder, CSCI 7000: Software Engineering for Scientists
@@ -124,5 +140,6 @@ python test_time_series.py
 * Ryan Layer's CSCI 7000 "Continuous Integration with Travis CI" document
 * Ryan Layer's CSCI 7000 "Test-Driven Development" document
 * Ryan Layer's CSCI 7000 "Times Series" document
+* Ryan Layer's CSCI 7000 "Pandas" document
 * PEP8 Style Guidelines: https://www.python.org/dev/peps/pep-0008/
 * Github: PurpleBooth/README-Template.md

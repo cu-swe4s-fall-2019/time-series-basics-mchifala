@@ -17,4 +17,7 @@ script:
     - pycodestyle test_time_series.py
     - pycodestyle data_import.py
     - python test_time_series.py
-    - bash functional_test.sh
+    - pycodestyle pandas_import.py
+    - pycodestyle test_time_series_pandas.py
+    - python test_time_series_pandas.py
+    - bash function_test.sh
