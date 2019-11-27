@@ -20,4 +20,4 @@ script:
     - pycodestyle pandas_import.py
     - pycodestyle test_time_series_pandas.py
     - python test_time_series_pandas.py
-    - bash function_test.sh
+    - bash functional_test.sh

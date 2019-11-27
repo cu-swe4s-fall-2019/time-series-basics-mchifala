@@ -144,7 +144,7 @@ def main(base_file, directory):
     Parameters:
     - base_file(str): A command line argument for the base file path
     - directory(str): A command line argument for the file directory path.
-    
+
     Returns:
     - None
     """
